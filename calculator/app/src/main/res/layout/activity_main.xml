@@ -18,23 +18,33 @@
         android:textColor="#CAC7CD"
         android:layout_marginTop="15dp"
         android:textAlignment="center"
-        />
+        android:gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/screen"
         android:layout_width="match_parent"
-        android:layout_height="145dp"
-        android:layout_gravity="center|right"
+        android:layout_height="90dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="30dp"
-        android:layout_weight="1"
         android:background="#9FA5A2"
+        android:layout_weight="0.5"
+        android:gravity="bottom|right"
         android:padding="10dp"
         android:textColor="#46464E"
-        android:textSize="40dp"
-    />
+        android:textSize="30dp" />
 
+    <TextView
+        android:id="@+id/ans_screen"
+        android:layout_width="match_parent"
+        android:layout_height="88dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="30dp"
+        android:background="#9FA5A2"
+        android:gravity="center|right"
+        android:layout_weight="0.5"
+        android:padding="10dp"
+        android:textColor="#46464E"
+        android:textSize="30dp" />
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
@@ -49,6 +59,7 @@
             android:layout_height="fill_parent"
             android:textColor="#E19423"
             android:text="AC"
+
             android:layout_margin="5dp"
             android:textSize="25dp"
             android:backgroundTint="#00000000"
@@ -56,7 +67,7 @@
         />
 
         <Button
-            android:id="@+id/back"
+            android:id="@+id/del"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="fill_parent"
@@ -69,7 +80,7 @@
             />
 
         <Button
-            android:id="@+id/mod"
+            android:id="@+id/percent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="fill_parent"
@@ -287,6 +298,7 @@
             android:layout_weight="1"
             android:layout_height="fill_parent"
             android:text="0"
+
             android:layout_margin="5dp"
             android:textSize="25dp"
             android:backgroundTint="#00000000"
@@ -299,6 +311,7 @@
             android:layout_weight="1"
             android:layout_height="fill_parent"
             android:text="."
+
             android:layout_margin="5dp"
             android:textSize="25dp"
             android:backgroundTint="#00000000"
@@ -311,6 +324,7 @@
             android:layout_weight="1"
             android:layout_height="fill_parent"
             android:text="="
+
             android:textColor="#E19423"
             android:layout_margin="5dp"
             android:textSize="25dp"
