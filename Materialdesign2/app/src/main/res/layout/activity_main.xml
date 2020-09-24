@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="6">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_gravity="fill_horizontal"
+            android:background="#FDFFFEFE"
+            android:theme="?attr/actionBarTheme">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@drawable/back" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:drawableRight="@drawable/done" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:layout_weight="2.5"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EE4AE4EA">
+
+            <TextView
+                android:id="@+id/profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Arjun Naik"
+                android:textSize="25dp" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:gravity="center">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="260dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="40dp"
+            android:fillViewport="false"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="38dp"
+                        android:layout_height="54dp"
+                        android:maxWidth="11dp"
+                        android:maxHeight="11dp"
+                        android:minWidth="11dp"
+                        android:minHeight="11dp"
+                        android:src="@drawable/gender" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/name"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Name"
+                        android:paddingRight="15dp"
+                        android:orientation="horizontal"
+                        tools:ignore="DuplicateIds,HardcodedText">
+
+                        <RadioGroup
+                            android:id="@+id/radiogroup"
+                            android:layout_width="fill_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:paddingLeft="4dp">
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="male"
+                                android:textSize="16dp"
+                                android:paddingRight="1dp"/>
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="female"
+                                android:textSize="16dp"
+                                android:paddingRight="1dp"/>
+
+                            <com.google.android.material.radiobutton.MaterialRadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="other"
+                                android:textSize="16dp"
+                                />
+
+                        </RadioGroup>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="43dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="5dp"
+                        android:maxWidth="11dp"
+                        android:maxHeight="11dp"
+                        android:minWidth="11dp"
+                        android:minHeight="11dp"
+                        android:src="@drawable/state_pin" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/phonef"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="State"
+                        android:paddingRight="15dp"
+                        tools:ignore="HardcodedText">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="51dp"
+                            android:enabled="false"
+                            android:inputType="text"
+                            android:text="Goa" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="43dp"
+                        android:layout_gravity="center_vertical"
+                        android:maxWidth="11dp"
+                        android:maxHeight="11dp"
+                        android:minWidth="11dp"
+                        android:minHeight="11dp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/phone"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="State"
+                        android:paddingRight="15dp">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner1"
+                            android:layout_width="match_parent"
+                            android:layout_height="53dp"
+                            android:background="@drawable/spinner_background"
+                            android:spinnerMode="dialog"
+                            android:drawableEnd="@drawable/arrowright" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="43dp"
+                        android:layout_gravity="center_vertical"
+                        android:maxWidth="11dp"
+                        android:maxHeight="11dp"
+                        android:minWidth="11dp"
+                        android:minHeight="11dp"
+                        android:src="@drawable/birthday" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/dob"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="date of birth"
+                        android:paddingRight="15dp">
+
+                        <EditText
+                            android:id="@+id/editText1"
+                            android:layout_width="match_parent"
+                            android:layout_height="53dp"
+                            android:drawableEnd="@drawable/calender"
+                            android:ems="10"/>
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+  </LinearLayout>
