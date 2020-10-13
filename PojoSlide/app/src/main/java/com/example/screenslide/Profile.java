@@ -22,7 +22,7 @@ public class Profile {
         this.gender="male";
         this.state="Goa";
         this.district="North Goa";
-        this.dob="23/05/1997";
+        this.dob="09 Oct 1997";
 
     }
 

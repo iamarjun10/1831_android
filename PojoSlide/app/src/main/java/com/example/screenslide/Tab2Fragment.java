@@ -22,6 +22,8 @@ import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 
+import com.google.android.material.datepicker.MaterialDatePicker;
+import com.google.android.material.datepicker.MaterialPickerOnPositiveButtonClickListener;
 import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
@@ -95,35 +97,6 @@ public class Tab2Fragment extends Fragment {
         });
 
 
-        //date picker
- //       eText = (EditText) getView().findViewById(R.id.dob_1);
-//        eText.setInputType(InputType.TYPE_NULL);
-
-
-/*
-        eText.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final Calendar cldr = Calendar.getInstance();
-                int day = cldr.get(Calendar.DAY_OF_MONTH);
-                int month = cldr.get(Calendar.MONTH);
-                int year = cldr.get(Calendar.YEAR);
-                // date picker dialog
-
-                picker = new DatePickerDialog(v.getContext(), new DatePickerDialog.OnDateSetListener() {
-                    @Override
-                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                        eText.setText(dayOfMonth + "/" + (month + 1) + "/" + year);
-                    }
-                }, year, month, day);
-
-                picker.show();
-            }
-        });
-*/
-
-
-        // Inflate the layout for this fragment
         RadioGroup gender_rg = (RadioGroup) view.findViewById(R.id.radiogroup);
         TextInputEditText state_et = (TextInputEditText) view.findViewById(R.id.state);
         Spinner spinner1 = (Spinner) view.findViewById(R.id.spinner1);
@@ -153,13 +126,24 @@ public class Tab2Fragment extends Fragment {
 
         dob_et.setText(dob);
 
+        MaterialDatePicker.Builder builder= MaterialDatePicker.Builder.datePicker();
+
+        final MaterialDatePicker materialDatePicker= builder.build();
+
         dob_et.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                DialogFragment newFragment = new DatePickerFragment();
-                newFragment.show(getFragmentManager(),"datePicker");
-            }
+            public void onClick(View view) {
+                materialDatePicker.show(getFragmentManager(),"Date_Picker");
 
+            }
+        });
+
+        materialDatePicker.addOnPositiveButtonClickListener(new MaterialPickerOnPositiveButtonClickListener() {
+            @Override
+            public void onPositiveButtonClick(Object selection) {
+                dob_et.setText(materialDatePicker.getHeaderText());
+
+            }
         });
 
         return view;
