@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/ic_launcher"
+        android:padding="4dp"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/imageView"
+        android:text="Panaji"
+        android:textSize="20dp"
+        android:layout_marginStart="22dp"
+        android:textColor="#000"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gender"
+        android:gravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:textSize="20dp"
+        android:layout_marginLeft="10dp"
+        android:padding="5dp"
+        android:text="male"
+        android:layout_toRightOf="@id/textView" />
+
+    <ImageView
+        android:id="@+id/edit"
+        android:layout_width="38dp"
+        android:layout_height="42dp"
+        android:padding="5dp"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/edit"
+        android:layout_toStartOf="@id/deleteButton"/>
+
+
+    <ImageView
+        android:id="@+id/deleteButton"
+        android:layout_width="38dp"
+        android:layout_height="42dp"
+        android:src="@drawable/ic_baseline_delete"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:paddingRight="10dp" />
+
+</RelativeLayout>
